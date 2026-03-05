@@ -36,6 +36,7 @@ const addProduct = async(req,res)=>{
 
 }
 const deleteProduct = async(req,res)=>{
+    
     const deleteProductObj = await productSchema.findByIdAndDelete(req.params.id)
     if(deleteProductObj){
         res.json({

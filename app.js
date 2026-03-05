@@ -8,6 +8,9 @@ dbcollection()
 
 const productRoutes =  require("./src/routes/ProductRoutes")
 app.use("/prod",productRoutes)
+
+const bookRoutes = require("./src/routes/BookRoutes")
+app.use("/book",bookRoutes)
                                        
 const PORT=3000;
 app.listen(PORT,()=>{
