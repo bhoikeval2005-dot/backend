@@ -9,8 +9,8 @@ const productSchema =new Schema({
     ProductPrice:{
        type :Number 
     },
-    ProductColor:{
+    ProductColor:[{
        type :String
-    }
+    }]
 })
 module.exports= mongoose.model("products",productSchema)
