@@ -50,10 +50,20 @@ const deleteProduct = async(req,res)=>{
         })
     }
 }
+
+const updateProduct = async(req,res)=>{
+    const updateObj = await productSchema.findByIdAndUpdate(req.params.id,req.body,{ returnDocument: "after" })
+    res.status(300).json({
+        message:"product is updated",
+        data:updateObj
+    })
+}
+
 module.exports = {
     
     getAllProduct,
     getProductById,
     addProduct,
-    deleteProduct
+    deleteProduct,
+    updateProduct
 }

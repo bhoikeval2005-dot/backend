@@ -11,6 +11,10 @@ const productSchema =new Schema({
     },
     ProductColor:[{
        type :String
-    }]
+    }],
+    ProductSize:{
+      enum:["L","XL","X","3XL"],
+      type:String
+    }
 })
 module.exports= mongoose.model("products",productSchema)
